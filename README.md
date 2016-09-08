@@ -1,3 +1,3 @@
 # CSS Counters
 
-Checkout the [Demo](https://shadeed.github.io/css-counters/)
+Check out the [Demo](https://shadeed.github.io/css-counters/)
