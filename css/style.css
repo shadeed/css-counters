@@ -120,13 +120,13 @@ hr {
   background: #3887df;
   border: 0; }
 
-.section {
+section {
   padding: 1em; }
-  .section h2 {
+  section h2 {
     font-size: 2rem;
     margin-bottom: 1rem; }
 
-.section--intro {
+.intro {
   max-width: 30em;
   margin-left: auto;
   margin-right: auto;
@@ -216,7 +216,7 @@ footer {
         background: #3887df;
         margin-left: 0.75em; }
 
-  .section--intro {
+  .intro {
     font-size: 1.5rem; }
 
   p {
