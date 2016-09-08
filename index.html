@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Counters</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header role="banner">
+    <h1 class="page-title">
+      <span>CSS Counters</span> <span>Simple Guide</span>
+    </h1>
+    <object aria-hidden="true" data="img/numbers.svg" type="image/svg+xml"></object>
+  </header>
+
+  <section class="section section--intro">
+    <p>Every time I use CSS Counters, I always read CSS spec or MDN in order to get a reminder of how they work. In this simple page, you will learn how to memorize them easily.</p>
+  </section>
+
+  <hr>
+
+  <div class="wrapper">
+    <section class="section">
+      <h2>What are CSS Counters?</h2>
+
+      <p>They provide us with a way to control number variables in generated content, just like HTML ordered lists.</p>
+    </section>
+
+    <section class="section">
+      <h2>The three C’s</h2>
+      <ul class="list">
+        <li class="list__item">counter-reset</li>
+        <li class="list__item">counter-increment</li>
+        <li class="list__item">counter()</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="visually-hidden">steps</h2>
+
+      <ul class="steps">
+        <li class="steps__item">
+          <h3>Set the counter</h3>
+          <p>Pick a name for your counter and add the property counter-reset assigned with the name you picked to the parent
+            element of the list you have.</p>
+          <pre>
+            ul { 
+              &nbsp;&nbsp;&nbsp;&nbsp;counter-reset: list; 
+            }
+          </pre>
+        </li>
+
+        <li class="steps__item">
+          <h3>Increment the counter</h3>
+          <p>Since CSS variables are generated content, we only use them with pseudo elements. Go to the child element you want and then assign counter-increment.</p>
+          <pre>
+            li:before {
+              &nbsp;&nbsp;&nbsp;&nbsp;counter-increment: list;
+            }
+          </pre>
+        </li>
+
+        <li class="steps__item">
+          <h3>Assign the counter</h3>
+          <p>Add counter() function to the content property of the pseudo element.</p>
+          <pre>
+            li:before {
+               &nbsp;&nbsp;&nbsp;&nbsp;counter-increment: list;
+               &nbsp;&nbsp;&nbsp;&nbsp;content: counter(list);
+            }
+          </pre>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Use case (s)</h2>
+
+      <ul class="services">
+        <li class="services__item">Design
+          <ul>
+            <li>Web</li>
+            <li>Mobile</li>
+            <li>Graphic</li>
+          </ul>
+        </li>
+
+        <li class="services__item">Web Development</li>
+
+        <li class="services__item">Mobile Development
+          <ul>
+            <li>iOS</li>
+            <li>Android</li>
+            <li>Windows Phone</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>What about the support?</h2>
+
+      <p>It's awesome. CSS Counters are supported strong <b>97.86%</b> globally. IE8+</p>
+    </section>
+  </div>
+
+  <hr class="visually-hidden">
+
+  <footer>
+    That's all folks.
+  </footer>
+</body>
+
+</html>
